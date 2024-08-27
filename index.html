@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinterio</title>
+
+    <!-- -------- CSS file Linkup-------- -->
+     <link rel="stylesheet" href="style.css">
+
+    <!-- --------custom font Linkup--------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- --------DaisyUI Link ----------- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- -------- Tailwind Linkup--------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- --- Tailwind Custom Property--------- -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': 'rgb(171, 239, 95)',
+                'boundary-color' : 'rgb(233, 233, 233)',
+                'icon-color' : 'rgb(115, 115, 115)',
+                'second-color': 'rgba(171, 239, 95, 0.5)',
+                'btn-border': 'rgb(171, 239, 95)',
+                'banner-bg': '#f9f9f9',
+                'main-section-bg': '#f4f4f4',
+                'most-common': 'rgb(73, 73, 73)',
+                'footer-bg': 'rgb(28, 28, 28)',
+                
+
+              },
+              backgroundImage: {
+              'main-structure': "url('/images/Rectangle.png')",
+              'paper-bg': "url('/images/bg.jpg')",
+              
+              },
+
+              fontFamily:{
+                manrope : 'Manrope, sans-serif',
+              }
+              
+            }
+          }
+        }
+    </script>
+
+</head>
+
+<body class="marope text-most-common">
+    
+    <header class="bg-banner-bg">
+
+        <!-- -----------------nav-bar----------- -->
+        <section class="max-w-[95%]  lg:max-w-[90%]  mx-auto">
+            <div class="flex justify-between  font-manrope">
+                <div class="">
+                  <div class="dropdown absolute right-5 bg-white border-solid border-2 border-boundary-color p-1 rounded-full lg:hidden mt-12">
+                    <div tabindex="0" role="button" class=" lg:hidden">
+                      <svg class="w-8 text-icon-color"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    
+                  </div>
+
+                  <!-- -- logo container-- -->
+                  <div class="flex gap-3 mt-12">
+
+                    <svg class="rotate-180 w-10 bg-primary-color rounded-full p-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+                    </svg>
+
+                    <a class="text-4xl font-extrabold">Rinterio</a>
+
+                  </div>
+                  
+                  
+                </div>
+                <div class="hidden lg:flex mt-12">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Protfolio</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact Us</a></li>
+                  </ul>
+                </div>
+
+                <div class="">
+                    
+                    <div class="hidden sm:flex sm:mr-20 lg:mr-0 gap-3 items-center mt-12">
+                        <!----  Cart and Search Icon --->
+                        <div class="flex gap-3 text-icon-color">
+                            <!-- ----cart icon ------>
+                            <svg class="w-8 bg-white border-solid border-2 border-boundary-color rounded-full p-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                              
+                            <!-- --Search Icon ---->
+                            <svg class="w-8 bg-white border-solid border-2 border-boundary-color rounded-full p-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                              
+                        </div>
+
+                        <!-- -- Button and arrow-- -->
+
+                        <div class="flex gap-3 cursor-pointer bg-primary-color p-3 rounded-full">
+
+                             <!-- ---- button ---- -->
+                            <a class="font-bold text-base">Book Consult</a>
+
+                            <!-- --- arrow icon---- -->
+                            <svg class="rotate-180 w-6 text-white bg-black rounded-full p-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+                            </svg>
+
+                        
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+              </div>
+
+        </section>
+        <!-- ------- Header-main--------- -->
+        <section class="max-w-[95%]  lg:max-w-[90%]  mx-auto">
+          <div class="card mt-10">
+            <figure>
+              <img
+                src="images/banner.png"
+                alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-4xl lg:text-5xl font-extrabold text-center">
+                Where Style Meets Space, Inside and Outside.
+              </h2>
+              <p class="text-base text-justify mt-8">
+                At Rinterio, we believe that great design goes beyond the boundaries of walls and exteriors. We specialize in creating harmonious environments that showcase your personal style while optimizing every inch of your space.
+              </p>
+
+              <!-- -- Button and arrow-- -->
+
+              <div class="flex gap-3 justify-center items-center cursor-pointer bg-second-color p-3 rounded-full w-full md:w-56 mx-auto border-solid border-2 border-btn-border mt-8">
+
+                <!-- ---- button ---- -->
+               <a class="font-bold text-xl">View Details</a>
+
+               <!-- --- arrow icon---- -->
+               <svg class="rotate-180 w-8 text-black bg-primary-color rounded-full p-[6px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+               </svg>
+
+           
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+    </header>
+
+    <main class="bg-main-section-bg ">
+
+      <!-- --------extra sec------------ -->
+      <img class="w-24 ml-24 pt-2 lg:block hidden" src="images/Vector.png" alt="">
+
+      <!-- ---------- About Us Tag ------------ -->
+      <section class="max-w-[80%] mx-auto pt-12 lg:pt-4">
+
+           <div class="w-48 mx-auto lg:mx-0 mb-10 flex items-center bg-white rounded-full justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+            
+            <a class="font-extrabold text-2xl  px-4 py-2 " href="">About Us</a>
+          </div>
+
+      </section>
+      <!-- ---------------about Us--------- -->
+      <section class="max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2  gap-10 text-most-common">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
+
+             
+              <!-- ------- about us heading ----- -->
+              <div class="space-y-4 md:col-span-2 lg:col-span-1">
+                <h3 class="font-extrabold text-4xl text-center lg:text-left">We Design Elegant And Functional Spaces</h3>
+                <p class="text-lg text-justify lg:text-left">
+                  At Rinterio, we design elegant, functional spaces that seamlessly blend beauty with practicality, ensuring your environment is as stylish as it is livable.
+                </p>
+              </div>
+
+
+               <!-- ------- about us card1 ----- -->
+
+
+              <div class="flex items-center gap-4 bg-white p-4 rounded-2xl">
+
+                <div>
+                  <img class=" " src="images/commercial.png" alt="">
+                </div>
+                
+                <div>
+                  <h3 class="font-extrabold text-xl">Commercial</h3>
+                  <p class="text-lg">
+                    At Rinterio, we create stylish, functional commercial spaces.
+                  </p>
+                </div>
+
+              </div>
+              
+
+
+                <!-- ------- about us card2 ----- -->
+              <div class="flex items-center gap-4 bg-white p-4 rounded-2xl">
+
+                  <div>
+                    <img class="" src="images/residential.png" alt="">
+                  </div>
+                  
+                  <div>
+                    <h3 class="font-extrabold text-xl">Residential</h3>
+                    <p class="text-lg">
+                      At Rinterio, we create stylish, functional Residential spaces also.
+                    </p>
+                  </div>
+  
+              </div>
+
+
+            </div>
+
+            <div class="w-full h-96 lg:h-auto bg-main-structure bg-cover rounded-xl">
+
+            </div>
+            
+            
+      </section>
+
+      <!-- ------ What we have --------------- -->
+      <section class="max-w-[80%] mx-auto mt-10 text-most-common">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  lg:gap-2 p-4 bg-white rounded-3xl">
+    
+          <!-- --------client review------ -->
+          <div class="text-center p-10">
+            <svg class="w-9 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+            </svg>
+            
+            <h3 class="text-4xl font-bold "> 235+ </h3>
+    
+            <p class="text-xl lg:text-xs">Happy Client Review</p>
+    
+          </div>
+    
+          <!-- --------Work Departments------ -->
+          <div class="text-center p-10">
+            <svg class="w-9 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+            </svg>
+            
+            
+            <h3 class="text-4xl font-bold "> 50+ </h3>
+    
+            <p class="text-xl lg:text-sm">Work Departments</p>
+    
+          </div>
+    
+          <!-- --------happy client------ -->
+          <div class="text-center p-10">
+            <svg class="w-9 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+            </svg>
+            
+            
+            <h3 class="text-4xl font-bold "> 30K+ </h3>
+    
+            <p class="text-xl lg:text-sm">Happy Clients</p>
+    
+          </div>
+    
+          <!-- --------Staff Member------ -->
+          <div class="text-center p-10">
+            <svg class="w-9 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+            </svg>
+            
+            
+            <h3 class="text-4xl font-bold "> 307+ </h3>
+    
+            <p class="text-xl lg:text-sm">Staff Members</p>
+    
+          </div>
+    
+    
+        </div>
+    
+      </section>
+
+      <!-- -------- How We Works------------ -->
+      <section class="max-w-[80%] mx-auto mt-10 text-most-common">
+        <!-- ---------- HWW Tag----------- -->
+        <div class="max-w-[85%] mx-auto pt-12 lg:pt-6">
+
+          <div class="w-60 mx-auto mb-10 flex items-center bg-white rounded-full justify-center">
+
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+           </svg>
+           
+           <a class="font-extrabold text-2xl  px-4 py-2 " href="">How we works</a>
+         </div>
+
+        </div>
+
+        <!-- ---------- HWW Description----------- -->
+        <div>
+          <h3 class="font-extrabold text-4xl text-center">Our Works Process</h3>
+          <p class="text-xl text-center mt-2">At Rinterio, we combine strong concepts with careful supervision and budget-conscious strategies, ensuring your project is both well-designed and cost-effective.</p>
+        </div>
+
+        <!-- ---------- HWW cards----------- -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+
+          <!-- ---------- card-1 ------------- -->
+          <div class="space-y-2 bg-pink-200 p-4 rounded-2xl">
+            <img src="images/concept.png" alt="">
+            <h3 class="text-xl font-extrabold">Concept</h3>
+            <p>Our concept blends creative vision with practical execution to deliver stylish, budget-friendly solutions.</p>
+          </div>
+
+
+          <!-- ---------- card-2 ------------- -->
+          <div class="space-y-2 bg-yellow-300 p-4 rounded-2xl">
+            <img src="images/flow-chart.png" alt="">
+            <h3 class="text-xl font-extrabold">Design Process</h3>
+            <p>Our design process ensures thoughtful planning, precise execution, and budget-friendly results.</p>
+          </div>
+
+
+          <!-- ---------- card-3 ------------- -->
+          <div class="space-y-2 bg-green-200 p-4 rounded-2xl">
+            <img src="images/vision.png" alt="">
+            <h3 class="text-xl font-extrabold">Super Vision</h3>
+            <p>Our supervision ensures meticulous attention to detail and seamless project execution.</p>
+          </div>
+
+
+          <!-- ---------- card-4 ------------- -->
+          <div class="space-y-2 bg-blue-300 p-4 rounded-2xl">
+            <img src="images/budget-planning.png" alt="">
+            <h3 class="text-lg font-extrabold">Budget Planning</h3>
+            <p>We prioritize budget planning to deliver exceptional design within your financial goals.</p>
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- --------- Latest Protfolio -------- -->
+      <section class="bg-white pb-8">
+
+        <section class="max-w-[80%] mx-auto mt-10 text-most-common">
+
+          <!-- --------- Protfolio Tag-------- -->
+          <div class="max-w-[85%] mx-auto pt-12 lg:pt-6">
+
+            <div class="w-72 mx-auto mb-10 flex items-center bg-second-color rounded-full justify-center p-2 gap-2">
+  
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+             </svg>
+             
+             <a class="font-extrabold text-lg " href="">Explore our Latest works</a>
+           </div>
+  
+          </div>
+
+          <!-- ---------- Protfolio Description ------ -->
+          <div>
+            <h3 class="font-extrabold text-4xl text-center">Our Latest Portfolio</h3>
+            <p class="text-center text-lg mt-4">Explore Rinterio’s latest portfolio, featuring our most innovative and stylish projects. Each entry reflects our commitment to design excellence and creative detail.</p>
+          </div>
+
+          <!-- ------------ protfolio sec-1 --------- -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-9">
+            <div class="border-2 border-solid border-boundary-color rounded-2xl lg:col-span-2 grid grid-cols-1 lg:grid-cols-3 gap-2 items-center p-4">
+
+              <div>
+                <img class="w-full " src="images/img1.png " alt="">
+              </div>
+
+              <div class="space-y-4 col-span-2">
+                <h3 class="text-2xl font-extrabold">Commercial</h3>
+
+                <p class="text-lg text-justify">Check out Rinterio’s latest commercial portfolio, highlighting our most innovative and impactful designs.</p>
+
+                  <!-- -- Button and arrow-- -->
+
+                <div class="flex gap-3  items-center cursor-pointer  rounded-full w-full mx-auto mt-2">
+
+                  <!-- ---- button ---- -->
+                <a class="font-bold text-lg">View Details</a>
+
+                <!-- --- arrow icon---- -->
+                <svg class="rotate-180 w-6 text-black bg-primary-color rounded-full p-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+                </svg>
+
+            
+                </div>
+
+              </div>
+
+            </div>
+            <div class="w-full h-full border-2 border-solid border-boundary-color p-5 mx-auto my-auto rounded-2xl">
+              <img class="mx-auto w-full h-full" src="images/img2.png" alt="">
+            </div>
+
+          </div>
+
+          <!-- --- protfolio sec-2 lrage device - -->
+          <div class=" hidden lg:grid grid-cols-4 gap-4 mt-4">
+
+            <!-- ------- Computer device 1st image------ -->
+            <div class="border-2 border-solid border-boundary-color rounded-2xl p-4">
+              <img class="w-full" src="images/img3.png" alt="">
+            </div>
+
+
+            <!-- --- Computer device 2nd image----- -->
+            <div class="flex border-2 border-solid border-boundary-color rounded-2xl p-4 col-span-2 gap-4">
+
+              <div class="my-auto w-full">
+                <img class="w-full" src="images/img4.png" alt="">
+              </div>
+
+              <div class="my-auto space-y-4">
+                <h3 class="text-2xl font-extrabold">Residential</h3>
+                <p class="text-justify">Explore Rinterio’s latest residential portfolio, showcasing our most stylish and functional home designs.</p>
+
+                <div class="flex gap-2">
+
+                  <h3 class="text-lg font-bold">View Details</h3>
+                  <!-- icon---- -->
+                  <svg class="bg-primary-color rounded-full w-8 p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                  
+                </div>
+              </div>
+              
+            </div>
+
+
+            <!-- ------- Computer device 3rd image------ -->
+            <div class="border-2 border-solid border-boundary-color rounded-2xl p-4 ">
+              <img class="w-full" src="images/img5.png" alt="">
+            </div>
+            
+
+          </div>
+
+          <!-- ------------ protfolio sec-2 mid and low device -------- -->
+           <div class="grid grid-cols-1 gap-4 lg:hidden">
+            <!-- ------ 1st card ------- -->
+            <div class="border-2 border-solid border-boundary-color rounded-2xl p-5 mt-4">
+              <img class="w-full" src="images/img5.png" alt="">
+            </div>
+
+
+            <!-- ------ 2nd card ------- -->
+            <div class="flex-col border-2 border-solid border-boundary-color rounded-2xl p-5 gap-4">
+
+              <div class="my-auto w-full">
+                <img class="w-full" src="images/img4.png" alt="">
+              </div>
+
+              <div class="my-auto space-y-4">
+                <h3 class="text-2xl font-extrabold mt-4">Residential</h3>
+                <p class="text-justify">Explore Rinterio’s latest residential portfolio, showcasing our most stylish and functional home designs.</p>
+
+                <div class="flex gap-2">
+
+                  <h3 class="text-lg font-bold">View Details</h3>
+                  <!-- icon---- -->
+                  <svg class="bg-primary-color rounded-full w-8 p-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                  
+                </div>
+              </div>
+              
+            </div>
+
+
+            <!-- ------ 3rd card ------- -->
+            <div class="border-2 border-solid border-boundary-color rounded-2xl p-5 ">
+              <img class="w-full" src="images/img3.png" alt="">
+            </div>
+
+            <!-- ------ 4th card ------- -->
+            <div class="border-2 border-solid border-boundary-color rounded-2xl p-5 ">
+              <img class="w-full" src="images/img5.png" alt="">
+            </div>
+
+
+           </div>
+
+
+        </section>
+
+      </section>
+
+
+       <!-- ------- Meet Our Team----- -->
+      <section class="max-w-[80%] mx-auto mt-10 text-most-common flex flex-col lg:flex-row justify-between gap-6 mb-10">
+          <div class="max-w-full lg:max-w-[80%] my-auto space-y-8">
+            <h3 class="text-5xl font-extrabold text-center lg:text-left ">Meet Our Team</h3>
+            <p class="text-lg text-justify lg:text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem architecto ipsa fugiat nisi, labore iusto sunt sint obcaecati maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem architecto ipsa fugiat nisi, labore iusto sunt sint obcaecati maiores.</p>
+          </div>
+
+          <!-- -------- carosel section------- -->
+          <div class="mx-auto lg:mx-0">
+
+            <div class="carousel carousel-vertical rounded-box h-96">
+              <div class="carousel-item h-full">
+
+                
+                <div class="card bg-base-100 w-80 shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="images/team-1.jpg"
+                      alt="Shoes"
+                      class="rounded-full w-40" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">John Daniel</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <div class="carousel-item h-full">
+                
+
+                <div class="card bg-base-100 w-80 shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="images/team-2.webp"
+                      alt="Shoes"
+                      class="rounded-full w-40" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Vicky Smith</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="carousel-item h-full">
+                
+
+                <div class="card bg-base-100 w-80 shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="images/team-3.jpg"
+                      alt="Shoes"
+                      class="rounded-full w-40" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Katty Semiul</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="carousel-item h-full">
+                
+
+                <div class="card bg-base-100 w-80 shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="images/team-4.jpg"
+                      alt="Shoes"
+                      class="rounded-full w-40" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Daniel Smith</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions">
+                      <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              
+              
+            </div>
+
+          </div>
+
+      </section>
+
+        <!-- - Discuss About Next Project - -->
+      <section class="bg-white py-2">
+          <section class="bg-paper-bg ">
+            <section class="max-w-[80%] mx-auto text-most-common">
+
+              <div class="pt-28 pb-24">
+                <!-- ------- heding div ------ -->
+                <div class="space-y-5 ">
+                  <h3 class="text-5xl font-extrabold text-center ">Let’s Discuss Next Project</h3>
+                  <p class="text-lg text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                </div>
+
+                <!-- ------- Input text----- -->
+                <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+                  <input type="text" placeholder="First Name*" class="input w-full rounded-full" />
+                  <input type="text" placeholder="Last Name*" class="input w-full rounded-full" />
+                  <input type="text" placeholder="Phone Number*" class="input w-full rounded-full" />
+                  <input type="text" placeholder="Email ID*" class="input w-full rounded-full" />
+                  <textarea class="textarea w-full h-40 col-span-1 lg:col-span-2 rounded-3xl " placeholder="Write your message here"></textarea>
+
+                  <!-- -------- button ------ -->
+                  <div class=" col-span-1 lg:col-span-2 flex">
+
+
+                    <button class="btn btn-block bg-primary-color rounded-full text-2xl font-bold">Send Email <img class="w-8" src="images/up-right-arrow.png" alt="">
+                  </button>
+
+
+                    
+                    
+                  </div>
+                  
+
+                </div>
+
+              </div>
+
+
+            </section>
+          </section>
+      </section>
+       
+    </main>
+
+    <footer class="bg-footer-bg">
+
+        <section class="max-w-[80%] mx-auto py-24">
+          <!-- ------- logo ----- -->
+          <div class="flex gap-4 justify-center">
+            <svg class="w-12 p-2 bg-primary-color rounded-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+            <h3 class="text-white text-5xl font-black">Rinterio</h3>
+          </div>
+
+          <!-- ------- heading ------- -->
+          <div class="mt-10">
+            <p class=" text-xl text-gray-500 text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+
+          </div>
+
+
+          <!-- ----- List items----- -->
+          <div class="mt-16">
+            <ul class="text-gray-300 text-2xl font-bold flex flex-col lg:flex-row items-center lg:justify-around gap-8 lg:gap-0">
+              <li>Home</li>
+              <li>Service</li>
+              <li>Protfolio</li>
+              <li>Our Blogs</li>
+              <li>Contact Us</li>
+            </ul>
+
+          </div>
+
+
+          <!-- ------ Button------ -->
+          <div class="mt-14 flex justify-center">
+
+            <button class="w-60 btn btn-block bg-primary-color rounded-full text-2xl font-bold">Book Consult <img class="w-8" src="images/up-right-arrow.png" alt="">
+            </button>
+
+          </div>
+
+        </section>
+
+    </footer>
+   
+      
+</body>
+</html>
